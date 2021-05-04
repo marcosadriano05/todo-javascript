@@ -30,7 +30,7 @@ button {
 }
 
 body {
-  padding: 3rem;
+  padding: 3rem 1rem;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -46,30 +46,49 @@ h1 {
   margin-bottom: 2rem;
 }
 
-ul {
-  padding: 1rem 1.5rem;;
+.todos-container {
+  width: 100%;
+  max-width: 30rem;
   margin-bottom: 2rem;
-  background-color: #fff;
-  list-style: none;
-  min-width: 30rem;
-  border: none;
-  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.todos-container > p {
+  width: 20rem;
+  padding: 1rem;
+  color: #3f8a1d;
+  background: #dfffd0;
+  border: 2px solid #69e430;
+  border-radius: 10px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-li {
+ul {
+  background-color: #fff;
+  color: #000;
+  list-style: none;
+  min-width: 30rem;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+li:nth-child(n+2) {
+  border-top: 1px solid #ececec;
+}
+
+li span {
   width: 100%;
-  max-width: 30rem;
   padding: 1rem;
   margin-right: 1rem;
   border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-li:nth-child(n+2) {
-  border-top: 1px solid #ccc;
 }
 
 li:hover {

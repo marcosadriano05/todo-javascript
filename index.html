@@ -6,36 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <link rel="stylesheet" href="./styles.css">
+  <script type="text/javascript" defer src="./script.js"></script>
   <title>Todo List</title>
 </head>
 <body>
   <h1>Todo List</h1>
-  <ul>
-    <li>
-      Estudar
-      <button>
-        <i class="fas fa-trash"></i>
-      </button>
-    </li>
-    <li>
-      Trabalhar
-      <button>
-        <i class="fas fa-trash"></i>
-      </button>
-    </li>
-    <li>
-      Fazer exercícios
-      <button>
-        <i class="fas fa-trash"></i>
-      </button>
-    </li>
-    <li>
-      Ler um livro
-      <button>
-        <i class="fas fa-trash"></i>
-      </button>
-    </li>
-  </ul>
+  <div class="todos-container" data-todos-container>
+    <p data-message>Não esqueca suas tarefas adicionando-as aqui!</p>
+    <ul data-todos></ul>
+  </div>
   <form data-form>
     <label class="sr-only" for="enterTodo">Nova tarefa</label>
     <input 
