@@ -14,7 +14,7 @@ fulfillTodos()
 
 checkTodoListHasValues()
 
-todosList.addEventListener('click', event => {
+todosList.addEventListener('click', async event => {
   event.preventDefault()
   event.stopPropagation()
   clickedElement = event.target
@@ -24,7 +24,7 @@ todosList.addEventListener('click', event => {
     let todoMessage = listElement.textContent.match(/\w/g).join('')
     let newTodos = todos.filter(todo => todo !== todoMessage)
     todos = newTodos
-    localStorage.setItem('todos', newTodos)
+    await localStorage.setItem('todos', newTodos)
     listElement.remove()
   }
 
@@ -37,8 +37,7 @@ todosList.addEventListener('click', event => {
       .join('')
     let newTodos = todos.filter(todo => todo !== todoMessage)
     todos = newTodos
-    localStorage.setItem('todos', newTodos)
-    listElement.remove()
+    await localStorage.setItem('todos', newTodos)
     listElement.remove()
   }
   

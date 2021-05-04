@@ -44,6 +44,7 @@ h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .todos-container {
@@ -57,7 +58,8 @@ h1 {
 }
 
 .todos-container > p {
-  width: 20rem;
+  width: 100%;
+  max-width: 20rem;
   padding: 1rem;
   color: #3f8a1d;
   background: #dfffd0;
@@ -70,11 +72,16 @@ ul {
   background-color: #fff;
   color: #000;
   list-style: none;
-  min-width: 30rem;
+  width: 100%;
+  max-width: 30rem;
   border: none;
   border-radius: 30px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
+}
+
+li:hover {
+  background: #f5f4f4;
 }
 
 li:nth-child(n+2) {
@@ -83,21 +90,23 @@ li:nth-child(n+2) {
 
 li span {
   width: 100%;
-  padding: 1rem;
-  margin-right: 1rem;
+  padding: 0.25rem 1rem;
   border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-li:hover {
-  background: #f5f4f4;
+li span p {
+  word-break: break-word;
+  overflow: auto;
+  padding: 0.75rem 0;
 }
 
-li button {
-  width: 2rem;
-  height: 2rem;
+li span button {
+  margin-left: 1rem;;
+  min-width: 2rem;
+  min-height: 2rem;
   font-size: 1rem;
   border-radius: 50%;
   outline: none;
@@ -106,14 +115,23 @@ li button {
   background: none;
 }
 
-li button:hover, li button:focus {
+li span button:hover, li span button:focus {
   background: #c50000;
   color: #fff;
 }
 
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 form input {
   padding: 0.5rem 1rem;
-  width: 15rem;
+  width: 100%;
+  max-width: 15rem;
   border: 2px solid #90dcff;
   border-radius: 5px;
   outline: none;
