@@ -8,7 +8,6 @@ let todos = localStorage.getItem('todos') || []
 if (todos.length > 0) {
   todos = todos.split(',')
 }
-console.log(todos)
 
 fulfillTodos()
 
